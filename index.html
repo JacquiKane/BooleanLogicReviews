@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .questionButton {
+            width: 150px;
+        }
+        
+        .demorganButton {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Boolean Logic Self-check</h3>
+        <div style="padding : 5px;">
+            <p> See if you can solve the following Boolean logic equations. Click the question button to check your solution. You may need to use De Morgan's Laws for some of the questions.
+            </p>
+
+            <div class="row">
+                <!-- COLUMN 1-->
+
+                <div class="col-md-4">
+                    <div>
+                        <button class=" btn btn-primary mb-3" data-toggle="collapse" data-target="#basicbooleanops" aria-expanded="Link to basic Boolean Operators">
+                            What are the 3 basic Boolean operators ? >>
+                        </button>
+                        <div id="basicbooleanops" class="collapse mb-3">
+                            The 3 basic Boolean operators are AND, OR, NOT. In Java, && represents logical AND, || represents logical OR and the ! represents the negate, NOT.
+                        </div>
+                    </div>
+                    <div>
+                        <button class=" btn btn-primary mb-3" data-toggle="collapse" data-target="#demorgan" aria-expanded="Link to De Morgan's Laws">
+                            What are De Morgan's Laws ? >>
+                        </button>
+                        <div id="demorgan" class="collapse mb-3">
+                            <div>NOT(a AND b) &lt;=&gt; NOT(a) OR NOT(b)</div>
+                            <div>NOT(a OR b) &lt;=&gt; NOT(a) AND NOT(b)</div>
+                        </div>
+                    </div>
+                    <div class="carousel slide carousel-fade w-100 h-50" id="truthtables" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#truthtables" data-slide-to="0" class="active"></li>
+                            <li data-target="#truthtables" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/ANDTableWhite.png" alt="AND Truth Table">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/ORTableWhite.png" alt="OR Truth Table">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#truthtables" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#truthtables" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END COL 1-->
+
+                <!-- COL 2-->
+                <div class="col-md-4 mr-3">
+
+                    <h6>a is true, b is false</h6>
+                    <button type="button" class="btn btn-primary mt-4 questionButton" data-toggle="modal" data-target="#answer1"> a &&
+                        !b</button>
+                    <div class="modal fade" id="answer1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aris-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If a is true and b is false, then this is true. <br> !b is true, <br> true && true is true
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 questionButton" data-toggle="modal" data-target="#answer2"> a
+                            &&
+                            b</button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aris-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If a is true and b is false, then this is false. <br> b is false,
+                                        <br> true && false is false
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 questionButton" data-toggle="modal" data-target="#answer3"> a
+                            ||
+                            b</button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aris-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If a is true and b is false, then this is true. <br> b is false,
+                                        <br> true || false is true
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 questionButton" data-toggle="modal" data-target="#answer4">
+                            !(a
+                            || b)
+                        </button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If a is true and b is false, then (a || b) is true. <br> Apply the negate,
+                                        <br> !(true) is false
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 questionButton" data-toggle="modal" data-target="#answer5">
+                            !a ||
+                            b
+                        </button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer5">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If a is true and b is false, then this is false. <br> a is true,<br>Apply the negate, !a is false
+                                        <br> false || false is false
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+
+
+                    <!-- End Container for Questions-->
+                    <!-- modal-->
+                </div>
+
+                <!-- END COLUMN 2 -->
+
+                <!-- COLUMN 3 -->
+                <div class="col-md-3">
+                    <h6>Simplify</h6>
+                    <button type="button" class="btn btn-primary mt-4 demorganButton" data-toggle="modal" data-target="#answer1">
+                        !a && !b && a</button>
+                    <div class="modal fade" id="answer1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        False, always. <br> a && !a is false - <br> Does not matter what b is.
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 demorganButton" data-toggle="modal" data-target="#answer2">
+                            (a && b) || !(a && b)</button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        This is always true, because if (a && b) is false, then !(a && b) is true.
+
+                                        <br> Only one operand in an OR needs to be true.
+                                        <br> Therefore the result is always true.
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 demorganButton" data-toggle="modal" data-target="#answer3">
+                            !(a && !b)</button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Using De Morgan's Law, and distribute the NOT<br> !a || !(!b)
+                                        <br> !a || b
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 demorganButton" data-toggle="modal" data-target="#answer4">
+                            !( !(a || b) || !(!a || b) )
+                        </button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Take this in parts. The outer NOT leads to use of De Morgan's Laws -
+                                        <br>(a || b) && (!a || b)<br> When is this true?
+                                        <br> Always true when b is true
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+                    <!-- next question-->
+                    <div>
+                        <button type="button" class="btn btn-primary mt-4 demorganButton" data-toggle="modal" data-target="#answer5">
+                            !( a || b ) && !( !a || !b )
+                        </button>
+                    </div>
+                    <!--Next question text for modal-->
+                    <div class="modal fade" id="answer5">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>Solution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden=true>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Using De Morgan's Laws, <br> !a && !b && a && b<br> This is always false.
+                                        <br> Why? a && !a, b && !b
+                                    </p>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-footer">
+                                    <span> Boolean Expressions </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal dialog -->
+                    <!-- End Question -->
+
+
+
+
+                    <!-- End Container for Questions-->
+                    <!-- modal-->
+                </div>
+
+            </div>
+            <!-- END COLUMN 3 -->
+
+
+
+            <!-- end container for review questions -->
+
+        </div>
+        <!-- container-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
